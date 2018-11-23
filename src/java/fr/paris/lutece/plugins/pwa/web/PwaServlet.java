@@ -22,7 +22,7 @@ public class PwaServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-		res.setContentType("text/html; charset=UTF-8");
+		res.setContentType("application/manifest+json");
 		Map<String, Object> model = new HashMap<>();
 
 		HtmlTemplate template = AppTemplateService.getTemplate(TEMPLATE_JSON, req.getLocale(), model);

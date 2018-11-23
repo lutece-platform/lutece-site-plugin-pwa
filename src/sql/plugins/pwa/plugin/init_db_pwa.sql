@@ -11,5 +11,4 @@ VALUES
 	("pwa.site_property.description", ""),
 	("pwa.site_property.orientation", "portrait"),
 	("pwa.site_property.icon.name", "launcher-icon"),
-	("pwa.site_property.name", "")
 	("pwa.site_property.fo.start.url", "Portal.jsp");
