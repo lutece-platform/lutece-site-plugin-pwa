@@ -31,25 +31,33 @@
  *
  * License 1.0
  */
-
+ 	
 package fr.paris.lutece.plugins.pwa.web;
 
-import java.util.Map;
+import fr.paris.lutece.portal.web.xpages.XPage;
+import fr.paris.lutece.portal.util.mvc.xpage.MVCApplication;
+import fr.paris.lutece.portal.util.mvc.commons.annotations.View;
+import fr.paris.lutece.portal.util.mvc.xpage.annotations.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import fr.paris.lutece.portal.service.content.PageData;
-import fr.paris.lutece.portal.service.includes.PageInclude;
-
-public class IncludeManifest implements PageInclude {
-
-      private static final String MARK_MY_INCLUDE = "pwa_link";
-
-      /**
-       * {@inheritDoc }
-       */
-      @Override
-      public void fillTemplate(Map<String, Object> rootModel, PageData data, int nMode, HttpServletRequest request) {
-            rootModel.put(MARK_MY_INCLUDE, "<link href=\"servlet/plugins/pwa/ManifestServlet\" rel=\"manifest\">");
-      }
+/**
+ * This class provides a simple implementation of an XPage
+ */
+@Controller( xpageName = "offline" , pageTitleI18nKey = "pwa.xpage.offline.pageTitle" , pagePathI18nKey = "pwa.xpage.offline.pagePathLabel" )
+public class OfflineApp extends MVCApplication
+{
+    private static final String TEMPLATE_XPAGE = "/skin/plugins/pwa/offline.html";
+    private static final String VIEW_HOME = "home";
+    
+    /**
+     * Returns the content of the page offline. 
+     * @param request The HTTP request
+     * @return The view
+     */
+    @View( value = VIEW_HOME , defaultView = true )
+    public XPage viewHome( HttpServletRequest request )
+    {
+        return getXPage( TEMPLATE_XPAGE, request.getLocale(  ) );
+    }
 }

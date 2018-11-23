@@ -42,8 +42,17 @@
      <servlets>
           <servlet>
                <servlet-name>PwaServlet</servlet-name>
-               <url-pattern>/servlet/plugins/pwa/PwaServlet</url-pattern>
-               <servlet-class>fr.paris.lutece.plugins.pwa.web.PwaServlet</servlet-class>
+               <url-pattern>/servlet/plugins/pwa/ManifestServlet</url-pattern>
+               <servlet-class>fr.paris.lutece.plugins.pwa.web.ManifestServlet</servlet-class>
           </servlet>
      </servlets>
+
+<!-- XPages parameters -->
+    <applications>
+        <application>
+            <application-id>offline</application-id>
+            <application-class>fr.paris.lutece.plugins.pwa.web.OfflineApp</application-class>
+        </application>
+    </applications>     
+    
 </plug-in>
