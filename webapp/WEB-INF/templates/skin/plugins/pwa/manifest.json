@@ -1,21 +1,21 @@
 {
-  "name": "#dskey{pwa.site_property.name}",
+  "name": "#dskey{pwa.site_property.01.name}",
 
-  "short_name": "#dskey{pwa.site_property.short_name}",
+  "short_name": "#dskey{pwa.site_property.02.short_name}",
 
-  "start_url": "#dskey{pwa.site_property.start.url}",
+  "start_url": "#dskey{pwa.site_property.06.start.url}",
 
-  "display": "#dskey{pwa.site_property.display}",
+  "display": "#dskey{pwa.site_property.04.display}",
 
-  "background_color": "#dskey{pwa.site_property.background.color}",
+  "background_color": "#dskey{pwa.site_property.10.background.color}",
 
-  "theme_color": "#dskey{pwa.site_property.theme.color}",
+  "theme_color": "#dskey{pwa.site_property.11.theme.color}",
 
-  "scope": "#dskey{pwa.site_property.scope}",
+  "scope": "#dskey{pwa.site_property.07.scope}",
 
-  "description": "#dskey{pwa.site_property.description}",
+  "description": "#dskey{pwa.site_property.03.description}",
 
-  "orientation": "#dskey{pwa.site_property.orientation}",
+  "orientation": "#dskey{pwa.site_property.05.orientation}",
 
   "icons": [
     {
