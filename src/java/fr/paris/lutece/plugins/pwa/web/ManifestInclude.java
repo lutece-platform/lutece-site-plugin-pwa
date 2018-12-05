@@ -34,46 +34,23 @@
 
 package fr.paris.lutece.plugins.pwa.web;
 
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-import fr.paris.lutece.portal.service.template.AppTemplateService;
-import fr.paris.lutece.portal.service.util.AppLogService;
-import fr.paris.lutece.util.html.HtmlTemplate;
+import fr.paris.lutece.portal.service.content.PageData;
+import fr.paris.lutece.portal.service.includes.PageInclude;
 
-public class ManifestServlet extends HttpServlet {
+public class ManifestInclude implements PageInclude {
 
-	private static final long serialVersionUID = 1L;
-	private static final String TEMPLATE_JSON = "/skin/plugins/pwa/manifest.json";
-	private static final String CONTENT_TYPE = "application/manifest+json";
+      private static final String MARK_INCLUDE = "pwa_manifest_link";
+      private static final String LINK = "<link href=\"servlet/plugins/pwa/ManifestServlet\" rel=\"manifest\">";
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
-		res.setContentType(CONTENT_TYPE);
-		Map<String, Object> model = new HashMap<>();
-
-		HtmlTemplate template = AppTemplateService.getTemplate(TEMPLATE_JSON, req.getLocale(), model);
-
-		res.getWriter().write(template.getHtml());
-
-	}
-
-	public void init(ServletConfig config) throws ServletException {
-		AppLogService.info("MANIFEST SERVLET INIT");
-	}
-
-	public String getServletInfo() {
-		return "This servlet delivers the manifest.webmanifest file";
-	}
-
-	public void destroy() {
-	}
+      /**
+       * {@inheritDoc }
+       */
+      @Override
+      public void fillTemplate(Map<String, Object> rootModel, PageData data, int nMode, HttpServletRequest request) {
+            rootModel.put(MARK_INCLUDE, LINK );
+      }
 }

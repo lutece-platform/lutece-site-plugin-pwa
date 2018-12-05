@@ -19,22 +19,14 @@
         <max-core-version/>	
     </core-version-dependency>
 
-    <!-- Admin features parameters -->
-    <admin-features>
-    </admin-features>    
-
-    <!-- XPages parameters -->
-    <applications>
-    </applications>
-
-    <!-- Portlet parameters -->
-    <portlets>
-   </portlets>
-   
 	<page-include-services>
 		<page-include-service> 
-			<page-include-service-name>My Include Service for the manifest file</page-include-service-name> 
-			<page-include-service-class>fr.paris.lutece.plugins.pwa.web.IncludeManifest</page-include-service-class> 
+			<page-include-service-name>Include Service for the Web Manifest file</page-include-service-name> 
+			<page-include-service-class>fr.paris.lutece.plugins.pwa.web.ManifestInclude</page-include-service-class> 
+		</page-include-service>
+		<page-include-service> 
+			<page-include-service-name>Include Service for Service Worker</page-include-service-name> 
+			<page-include-service-class>fr.paris.lutece.plugins.pwa.web.ServiceWorkerInclude</page-include-service-class> 
 		</page-include-service>
 	</page-include-services>
 	
