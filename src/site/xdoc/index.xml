@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin pwa</title>
+        <title>Plugin PWA</title>
     </properties>
     <body>
-        <section name="Plugin pwa">
-            <!--
+        <section name="Plugin PWA">
             <p>
                 <img src="images/pwa.png" />
             </p>
-            -->
             <subsection name="Introduction">
-                <p></p>
+                <p>
+                    This plugin let transform a Lutece site into a Progressive Web Application.
+                 </p>
+                 <p>
+                     The site thus becomes installable on a mobile phone or on the user's desktop
+                     using the information from a <b>Manifest</b> file (icon, shortcut name, ...).
+                 </p>
+                 <p>
+                     Resource loading strategies are optimized with a <b>Service</b> Worker who
+                     exploits a local cache.
+                </p>
             </subsection>
             <subsection name="Configuration">
-                <p></p>
-            </subsection>
-            <subsection name="Usage">
-                <p></p>
+                <p>
+                    Add in the file <b>page_frameset.html</b> the following code before the end of the <code> head </code> tag so
+                    to add the <b>Manifest</b> of the webapp
+<pre>
+        &lt;!- Progressive Webapp Manifest --&gt;
+        ${pwa_manifest_link}
+    &lt;/head&gt;
+</pre>
+                </p>
+                <p>
+                    Manifest attributes are customizable in the <b>Site Properties Management</b> of the <b>Site</b> menu of the Lutece's Back Office.                </p>
+                <p>
+                    Add in the file <b>page_frameset.html</b> the following code before the end of the <code> body </code> tag so
+                    to register the <b>Service Worker</b> of the webapp:
+<pre>
+        &lt;!- Service Worker registration --&gt;
+        ${pwa_service_worker}
+    &lt;/body&gt;
+</pre>
+                </p>
+                
             </subsection>
         </section>
     </body>

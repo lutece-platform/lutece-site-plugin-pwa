@@ -10,7 +10,7 @@
     <description>pwa.plugin.description</description>
     <provider>pwa.plugin.provider</provider>
     <provider-url>http://dev.lutece.paris.fr</provider-url>
-    <icon-url>images/admin/skin/feature_default_icon.png</icon-url>
+    <icon-url>images/admin/skin/plugins/pwa/pwa.png</icon-url>
     <copyright>Copyright (c) 2018 Mairie de Paris</copyright>
     <db-pool-required>0</db-pool-required>
     
@@ -21,11 +21,11 @@
 
 	<page-include-services>
 		<page-include-service> 
-			<page-include-service-name>Include Service for the Web Manifest file</page-include-service-name> 
+			<page-include-service-id>Include Service for the Web Manifest file</page-include-service-id> 
 			<page-include-service-class>fr.paris.lutece.plugins.pwa.web.ManifestInclude</page-include-service-class> 
 		</page-include-service>
 		<page-include-service> 
-			<page-include-service-name>Include Service for Service Worker</page-include-service-name> 
+			<page-include-service-id>Include Service for Service Worker</page-include-service-id> 
 			<page-include-service-class>fr.paris.lutece.plugins.pwa.web.ServiceWorkerInclude</page-include-service-class> 
 		</page-include-service>
 	</page-include-services>

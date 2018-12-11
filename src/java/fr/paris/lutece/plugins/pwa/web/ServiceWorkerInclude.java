@@ -45,7 +45,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class ServiceWorkerInclude implements PageInclude {
       private static final String MARK_INCLUDE = "pwa_service_worker";
-      private static final String LINK = "<script src=\"service-worker.js\"></script>";
+      private static final String LINK = "<script src=\"js/plugins/pwa/sw-registration.js\"></script>";
 
       /**
        * {@inheritDoc }
