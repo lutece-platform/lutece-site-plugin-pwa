@@ -48,4 +48,11 @@
         <jiraProjectName>PWA</jiraProjectName>
         <jiraComponentId></jiraComponentId>
     </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/lutece-platform/lutece-site-plugin-pwa.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-platform/lutece-site-plugin-pwa.git</developerConnection>
+        <url>https://github.com/lutece-platform/lutece-site-plugin-pwa.git</url>
+    </scm>
+
 </project>
