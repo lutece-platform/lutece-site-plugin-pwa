@@ -71,6 +71,12 @@ public class PwaHeadInclude implements PageInclude
     @Override
     public void fillTemplate( Map<String, Object> rootModel, PageData data, int nMode, HttpServletRequest request )
     {
+        // The search indexer builds the pages without request: the head of the application is no content to index
+        if ( request == null )
+        {
+            return;
+        }
+
         Map<String, Object> model = new HashMap<>( );
         model.put( MARK_THEME_COLOR, ManifestBuilder.toCssColor( DatastoreService.getDataValue( ManifestBuilder.KEY_THEME_COLOR, null ), StringUtils.EMPTY ) );
         model.put( MARK_APP_TITLE, StringUtils.trimToEmpty( StringUtils.defaultIfBlank( DatastoreService.getDataValue( ManifestBuilder.KEY_SHORT_NAME, null ),
